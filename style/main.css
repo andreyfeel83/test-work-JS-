@@ -1,0 +1,49 @@
+@import './reset.css';
+@import './header.css';
+@import './style.css';
+@import './media.css';
+
+.container {
+	width: 100%;
+	max-width: 1920px;
+	height: 2800px;
+	background-color: #141e55;
+	position: relative;
+}
+
+.gradient {
+	position: absolute;
+	top: 1400px;
+	left: 50%;
+	width: 600px;
+	height: 600px;
+	background: radial-gradient(
+		circle,
+		rgba(255, 255, 255, 1) -1%,
+		rgba(0, 185, 222, 1) 12%,
+		rgba(0, 133, 194, 1) 22%,
+		rgba(0, 104, 154, 0.39) 51%,
+		rgba(0, 83, 123, 0) 72%
+	);
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.gradient::before,
+.gradient::after {
+	content: '';
+	position: absolute;
+	right: 440px;
+	width: 100%;
+	height: 100%;
+	background: inherit;
+	border-radius: inherit;
+}
+
+.gradient::before {
+	top: -900px;
+}
+
+.gradient::after {
+	top: 900px;
+}
